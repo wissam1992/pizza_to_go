@@ -7,6 +7,7 @@
 	<!-- <link rel="icon" type="image/png" href="logo/logo.png"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/site.css">
+
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
 		integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
 		crossorigin="" />
@@ -17,21 +18,35 @@
 
 	<script src="js/notelist.js"></script>
 
-
+	
+		<link rel="stylesheet" href="css//footer.css"> 
+		<link rel="stylesheet" href="css/navi.css">  
 </head>
 
 <body style="margin: 0px">
 	<div class="mainContainer">
 		<header>
 
-			<div class="header">
-				<img src="logo.png" width="50" height="50" style="padding-left: 30px; float: left;">
-				<div class="header-right">
-					<a class="active" href="#home">WARENKORB</a>
-					<a href="javascript:showAnmeldung()">ANMELDEN</a>
-					<a href="javascript:showRegistration()">REGESTRIEREN</a>
-				</div>
-			</div>
+			
+  <nav class="navbar">
+ 
+	<a href="/"><img src="logo.png" alt="" class="img"></a>
+   <div>  <ul class="navbar__menu">
+	<li class="navbar__item">
+	  <a href="#home" class="navbar__links" id="home-page">WARENKORB</a>
+	</li>
+	<li class="navbar__item">
+	  <a href="javascript:showAnmeldung()" class="navbar__links" id="about-page">ANMELDEN</a>
+	</li>
+	<li class="navbar__item">
+	  <a href="javascript:showRegistration()" class="navbar__links" id="services-page"
+		>REGISTRIEREN</a
+	  >
+	</li>
+  
+  </ul>
+  </div>
+  </nav>
 
 		</header>
 		<article style="overflow: auto;">
@@ -44,37 +59,36 @@
 
 			</div>
 
-			<div id="anmeldung" style="width: 450px; display: none;padding-left: 20px;">
+			<div id="anmeldung" >
 
-				<h3>ANMELDUNG</h3>
-				<table>
-					<tr>
-						<td>Benutzer </td>
-						<td><input id="username" type="text" onblur="checkLoginOnFocus()" style="width: 197px;"
-								required /></td>
-					</tr>
-					<tr>
-						<td>Password </td>
-						<td><input id="password" type="password" style="width: 197px;" required /></td>
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td style="padding-top: 3px;">
-							<button type="button" style="width: 100px; height: 30px;"
-								onclick="login()">Anmelden</button>
-							<button id="Abbrechen" onclick="hideAnmeldung()"
-								style="width: 100px; height: 30px;">Abbrechen</button>
-						</td>
-					</tr>
+				<h3 id="anm" style="text-align: center;padding: 8px;">ANMELDUNG </h3>
+				<table > 
+				  <tr>
+					<td style="font-size: 18px;padding: 5px;">Benutzer </td>
+					<td><input id="username" type="text"
+					  onblur="checkLoginOnFocus()" required /></td>
+				  </tr>
+				  <tr>
+					<td style="font-size: 18; padding: 5px;">Password </td>
+					<td><input id="password" type="password"  required /></td>
+				  </tr>
+				  <tr >
+					<td>&nbsp;</td>
+					<td style="padding-top: 3px;">
+					  <button type="button" style="width:109px; height: 30px;font-size: 16px;" onclick="login()">Anmelden</button>
+					  <button id="Abbrechen" onclick="hideAnmeldung()"
+						style="width:109px; height: 30px; font-size: 16px;">Abbrechen</button>
+					</td>
+				  </tr>
 				</table>
-
-			</div>
+				
+				</div>
 
 			<div id="registration" style="width: 450px; display: none ; padding-left: 20px;">
 
 
 
-				<h3>Registrierung</h3>
+				<h3 style="padding: 5px; text-align: center;font-size: 20px;">Registrierung</h3>
 				<table>
 					<tr>
 						<td>Vorname</td>
@@ -183,10 +197,41 @@
 		</aside>
 
 		<footer>
-
-
+			
+			<div class="footer">
+				<div class="navigation-content">
+				<div class="logo"><img src="logo.png"/></div>
+				<div class="menu footer-menu">
+				<ul>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">TEAM</a></li>
+				<li><a href="#">SUPPORT</a></li>
+				</ul>
+				</div>
+				<div class="social">
+				<ul>
+				<li><a href="#"><img src="images/facebook.png"></a></li>
+				<li><a href="#"><img src="images/twitter.png"></a></li>
+				<li><a href="#"><img src="images/youtube.png"></a></li>
+				</ul>
+				</div>
+				</div>
+				
+				<div class="copyright">
+				<p>Copyright 2020 Pizzaro Theme.Going-To Internet</p>
+				
+				</div>
+			   
+				</div>
 		</footer>
+	
+	
+	
+	
 	</div>
+
+
 </body>
 
 
